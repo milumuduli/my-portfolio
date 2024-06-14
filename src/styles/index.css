@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+@keyframes move {
+  0% {
+    top: 500px;
+  }
+  50% {
+    top: 550px;
+  }
+  100% {
+    top: 500px;
+  }
+}
+.preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 999999;
+  background: url("../../public/images/loader.gif") no-repeat center #ffffff;
+}
+
+@media screen and (orientation: portrait) {
+  header {
+    margin: 0;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    z-index: 20;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px gray;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .container a {
+    text-decoration: none;
+    color: inherit;
+  }
+  header .brand_name {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  header .menus_container {
+    display: none;
+  }
+  section .hero {
+    height: 250px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  section .hero span {
+    color: #0d6efd;
+  }
+  section .hero_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+  }
+  section .hero_container div {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  section .hero_container div a {
+    text-decoration: none;
+    color: white;
+  }
+  section .hero_container #chevron {
+    display: none;
+  }
+  #about li {
+    margin-right: 40px;
+  }
+  #about .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10px;
+  }
+  #about .container .pic_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about .container .text_container {
+    height: 100%;
+  }
+  #about .container .pic2 {
+    height: 250px;
+    width: 2500px;
+    border-radius: 250px;
+    overflow: hidden;
+    background-image: url("../../public/images/my-Picture.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  #about .container .nav-pills .nav-link {
+    color: lightgray;
+    font-weight: bold;
+    padding: 0;
+    padding-bottom: 5px;
+    border-radius: 0;
+    border-bottom: 3px solid black;
+  }
+  #about .container .nav-pills .active {
+    background-color: unset;
+    border-radius: 0;
+    border-bottom: 3px solid #0d6efd;
+  }
+  #about .container dt {
+    margin-bottom: 10px;
+    color: #0d6efd;
+    font-weight: 500;
+  }
+  #services {
+    height: 1450px;
+  }
+  #services .container {
+    height: 100%;
+  }
+  #services .cards_container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    height: 1320px;
+  }
+  #services .cards_container .card_box {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(44, 43, 43);
+    border-radius: 10px;
+    padding: 40px;
+    transition: 2s;
+  }
+  #services .cards_container .card_box i {
+    font-size: 20px;
+  }
+  #services .cards_container .card_box i, #services .cards_container .card_box h2, #services .cards_container .card_box p, #services .cards_container .card_box a {
+    margin-bottom: 25px;
+    background-color: inherit;
+    color: white;
+    text-decoration: none;
+    background-color: unset;
+  }
+  #services .cards_container .card_box:hover {
+    transform: translateY(-10px);
+    transition: 2s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), #0d6efd);
+  }
+  #works .container {
+    padding: 15px;
+  }
+  #works .work_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  #works .work_container .work_card {
+    height: 300px;
+    width: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #works .work_container .work_card div {
+    padding: 30px;
+    margin-top: 300px;
+    height: 308px;
+    border-radius: 10px;
+    transition: 3s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), #0d6efd);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+  }
+  #works .work_container .work_card div h3, #works .work_container .work_card div i, #works .work_container .work_card div p, #works .work_container .work_card div a {
+    background-color: unset;
+    color: white;
+  }
+  #works .work_container .work_card:hover div {
+    transform: translateY(-305px);
+    transition: 1s;
+  }
+  #contact {
+    padding: 50px 0px;
+  }
+  #contact .container {
+    padding: 20px;
+  }
+  #contact .container .contact_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+  }
+  #contact .container .contact_container div {
+    margin-top: 10px;
+  }
+  #contact .container .contact_container a {
+    text-decoration: unset;
+    color: white;
+  }
+  #contact .container .contact_container i {
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 25px;
+  }
+  #contact .container .contact_container form {
+    width: 100%;
+  }
+  #contact .container .contact_container form dd {
+    margin-bottom: 30px;
+  }
+  #contact .container .contact_container form dd input {
+    height: 70px;
+    background-color: unset;
+    color: white;
+  }
+  #contact .container .contact_container form dd textarea {
+    height: 130px;
+    background-color: unset;
+    color: white;
+  }
+  #contact .container .contact_container form button {
+    background-color: #0d6efd;
+  }
+  footer {
+    padding: 20px;
+  }
+  footer .container {
+    padding: 20px;
+    background-color: rgb(44, 43, 43);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  footer .container div, footer .container span, footer .container a {
+    background-color: unset;
+    text-decoration: none;
+    color: white;
+  }
+}
+@media screen and (orientation: landscape) {
+  header {
+    margin: 0;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    z-index: 20;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px gray;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+  }
+  header .container .mobileresume {
+    display: none;
+  }
+  header .container a {
+    text-decoration: none;
+    color: inherit;
+  }
+  header .brand_name {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  header .menus_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 650px;
+  }
+  header .menus_container span, header .menus_container button {
+    font-size: 20px;
+  }
+  header .menus_container a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+  }
+  header .menus_container span {
+    padding: 0px 0px 3px 0px;
+    border-bottom: 3px solid black;
+  }
+  header .menus_container span:hover {
+    border-bottom: 3px solid #0d6efd;
+  }
+  section .hero {
+    height: 550px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  section .hero span {
+    color: #0d6efd;
+  }
+  section .hero_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    width: 50%;
+  }
+  section .hero_container div {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  section .hero_container div a {
+    text-decoration: none;
+    color: white;
+  }
+  section .hero_container .chevron {
+    font-size: 30px;
+    position: absolute;
+    top: 500px;
+    left: 700px;
+    animation: move 2s infinite;
+  }
+  #about {
+    padding: 50px 50px 0px 50px;
+    padding-top: 80px;
+  }
+  #about li {
+    margin-right: 40px;
+  }
+  #about .container {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    height: 580px;
+    padding: 20px;
+  }
+  #about .container .pic_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about .container .text_container {
+    padding: 0px 50px;
+    height: 100%;
+  }
+  #about .container .pic2 {
+    height: 400px;
+    width: 400px;
+    border-radius: 400px;
+    overflow: hidden;
+    background-image: url("../../public/images/my-Picture.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  #about .container .nav-pills .nav-link {
+    color: lightgray;
+    font-weight: bold;
+    padding: 0;
+    padding-bottom: 5px;
+    border-radius: 0;
+    border-bottom: 3px solid black;
+  }
+  #about .container .nav-pills .active {
+    background-color: unset;
+    border-radius: 0;
+    border-bottom: 3px solid #0d6efd;
+  }
+  #about .container dt {
+    margin-bottom: 10px;
+    color: #0d6efd;
+    font-weight: 500;
+  }
+  #services {
+    padding: 80px 50px 50px 50px;
+  }
+  #services .container {
+    padding: 20px;
+  }
+  #services .cards_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  #services .cards_container .card_box {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(44, 43, 43);
+    border-radius: 10px;
+    padding: 40px;
+    transition: 2s;
+  }
+  #services .cards_container .card_box i {
+    font-size: 20px;
+  }
+  #services .cards_container .card_box i, #services .cards_container .card_box h2, #services .cards_container .card_box p, #services .cards_container .card_box a {
+    margin-bottom: 25px;
+    background-color: inherit;
+    color: white;
+    text-decoration: none;
+    background-color: unset;
+  }
+  #services .cards_container .card_box:hover {
+    transform: translateY(-10px);
+    transition: 2s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), #0d6efd);
+  }
+  #works {
+    padding: 80px 50px 0px 50px;
+  }
+  #works .container {
+    padding: 20px;
+  }
+  #works .work_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  #works .work_container .work_card {
+    height: 300px;
+    width: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #works .work_container .work_card div {
+    padding: 30px;
+    margin-top: 300px;
+    height: 305px;
+    transition: 3s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), #0d6efd);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+  }
+  #works .work_container .work_card div h3, #works .work_container .work_card div i, #works .work_container .work_card div p, #works .work_container .work_card div a {
+    background-color: unset;
+    color: white;
+  }
+  #works .work_container .work_card:hover div {
+    transform: translateY(-305px);
+    transition: 1s;
+  }
+  #contact {
+    padding: 50px 50px 0px 50px;
+  }
+  #contact .container {
+    padding: 20px;
+  }
+  #contact .container .contact_container {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    margin-top: 50px;
+  }
+  #contact .container .contact_container div {
+    margin-top: 10px;
+  }
+  #contact .container .contact_container a {
+    text-decoration: unset;
+    color: white;
+  }
+  #contact .container .contact_container i {
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 25px;
+  }
+  #contact .container .contact_container form {
+    width: 100%;
+  }
+  #contact .container .contact_container form dd {
+    margin-bottom: 30px;
+  }
+  #contact .container .contact_container form dd input {
+    height: 70px;
+    background-color: unset;
+    color: white;
+  }
+  #contact .container .contact_container form dd textarea {
+    height: 130px;
+    background-color: unset;
+    color: white;
+  }
+  #contact .container .contact_container form button {
+    background-color: #0d6efd;
+  }
+  footer {
+    padding: 50px;
+  }
+  footer .container {
+    padding: 20px;
+    background-color: rgb(44, 43, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .container div, footer .container span, footer .container a {
+    background-color: unset;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
